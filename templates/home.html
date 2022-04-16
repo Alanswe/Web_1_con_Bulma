@@ -1,0 +1,51 @@
+{%extends 'base.html'%}
+
+{%block title%}Home{%endblock%}
+
+{%block content%}
+
+
+<section class="hero is-success is-fullheight">
+    <!-- Hero head: will stick at the top -->
+    <div class="hero-head">
+      <header class="navbar">
+        <div class="container">
+          <h1 class="title is-3 $title-white">Hola Mundo de las plantillas</h1>
+        </div>
+      </header>
+    </div>
+
+    <!-- Hero content: will be in the middle -->
+    <div class="hero-body">
+        <div class="container has-text-centered">
+          <div>
+            <table class="table is-striped is-bordered">
+              <tr>
+                  <th>Id</th>
+                  <th>Nombre</th>
+                  <th>Apellidos</th>
+                  <th>DNI</th>
+                  <th>Ocupación</th>
+                  <th>Número</th>
+              </tr>
+              {% for fila in datos%}
+              <tr>
+                  <td>{{fila[0]}}</td>
+                  <td>{{fila[1]}}</td>
+                  <td>{{fila[2]}}</td>
+                  <td>{{fila[3]}}</td>
+                  <td>{{fila[4]}}</td>
+                  <td>{{fila[5]}}</td>
+                  <td><a class="button is-primary" href="/editar/{{fila[0]}}">Editar</a></td>
+                  <td><a class="button is-danger is-hovered" href="/delete/{{fila[0]}}">Borrar</a></td>
+                  <!-- <td><button class="delete is-large"></button></td> -->
+                  </td>
+              </tr>
+              {%endfor%}
+            </table>
+          </div>
+        </div>
+    </div>
+  </section>
+
+{%endblock%}
