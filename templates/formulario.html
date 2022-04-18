@@ -21,12 +21,15 @@
                     
                     <form class="form-horizontal" action="/guardar" method="post">
                         <fieldset>
-                                            <!-- Form Name -->
-                                            <legend>Formulario de registro</legend>
-                                            
-                                            <!-- Text input-->
-                                            <div class="field">
-                                                <label class="label" for="nombre">Nombre</label>
+                            <!-- Form Name -->
+                            <legend>Formulario de registro</legend>
+                            <h2>Datos personales</h2>
+                            <input type="hidden" id="id" name="id" value="{%if datos%}{{datos[0]}}{%endif%}"><br/>
+
+                            
+                            <!-- Text input-->
+                            <div class="field">
+                                <label class="label" for="nombre">Nombre</label>
                                 <div class="control">
                                     <input id="nombre" name="nombre" type="text" placeholder="Pepito..." class="input " value="{%if datos%}{{datos[1]}}{%endif%}">
                                     <p class="help">Introduzca su Nombre o Nombres</p>
