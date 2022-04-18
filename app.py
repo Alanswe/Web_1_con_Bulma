@@ -75,7 +75,7 @@ def delete(id):
 @route('/guardar',method='POST')
 def guardar():
     nombre = request.POST.nombre
-    apellidos = request.POST.apellidos
+    apellidos = request.POST.apellido
     dni = request.POST.dni
     id = request.POST.id
     ocupacion = request.POST.ocupacion
