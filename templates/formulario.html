@@ -104,9 +104,9 @@
                                 </div>
                             </div>
                             <div>
-                                {% for fila in datos%}
-                                <a href="/delete/{{fila[0]}}">Borrar</a>
-                                {%endfor%}
+                                {% if datos%}
+                                <a href="/delete/{{datos[0]}}">Borrar</a>
+                                {%endif%}
                             </div>
                         </fieldset>
                     </form>
